@@ -59,6 +59,7 @@ public class GameController {
 
         List<String> playerNames = NameParser.parseInputToPlayerNames(inputPlayerNames);
         NameValidator.validateNameSize(playerNames);
+        NameValidator.validateDuplicatedPlayerNames(playerNames);
 
         return playerNames;
     }
