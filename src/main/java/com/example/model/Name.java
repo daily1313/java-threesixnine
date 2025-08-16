@@ -1,5 +1,7 @@
 package com.example.model;
 
+import com.example.exception.NameNotBlankException;
+
 public class Name {
 
     private String name;
@@ -19,7 +21,7 @@ public class Name {
 
     private void validate(String name) {
         if(name == null || name.isBlank()) {
-            throw new IllegalArgumentException("이름은 공백이 될 수 없습니다.");
+            throw new NameNotBlankException();
         }
     }
 }
