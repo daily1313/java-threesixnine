@@ -2,7 +2,6 @@ package com.example.controller;
 
 import com.example.model.Name;
 import com.example.model.Player;
-import com.example.strategy.GameContext;
 import com.example.strategy.GameStrategy;
 import com.example.strategy.MultipleClapStrategy;
 import com.example.strategy.SingleClapStrategy;
@@ -25,13 +24,27 @@ public class GameController {
     }
 
     public void start() {
+        int number = 1;
         int option = getGameOption();
         List<String> playerNames = getPlayerNames();
         List<Player> players = getPlayers(playerNames);
         GameStrategy gameStrategy = getGameStrategy(option);
 
-        GameContext gameContext = new GameContext(gameStrategy, inputView, outputView);
-        gameContext.execute(players);
+        while (true) {
+            for (Player player : players) {
+                String answer = gameStrategy.getAnswer(number);
+                String input = inputView.inputNumberByPlayer(player.getName());
+
+                if (!answer.equals(input)) {
+                    outputView.printResult(players);
+                    outputView.printLoser(player.getName());
+                    return;
+                }
+
+                player.incrementPlayCount();
+                number++;
+            }
+        }
     }
 
     private int getGameOption() {
