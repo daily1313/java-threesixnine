@@ -1,5 +1,7 @@
 package com.example.model;
 
+import java.util.Objects;
+
 public class Count {
 
     private int count;
@@ -22,5 +24,17 @@ public class Count {
 
     public int getCount() {
         return count;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Count count1 = (Count) o;
+        return count == count1.count;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(count);
     }
 }
