@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.model.vo;
 
 import java.util.Objects;
 

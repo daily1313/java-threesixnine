@@ -1,5 +1,8 @@
 package com.example.model;
 
+import com.example.model.vo.Count;
+import com.example.model.vo.Name;
+
 public class Player {
 
     private final Name name;

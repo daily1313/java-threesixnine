@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.model.vo;
 
 import com.example.exception.NameNotBlankException;
 

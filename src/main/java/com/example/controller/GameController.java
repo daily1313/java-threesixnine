@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.model.Name;
+import com.example.model.vo.Name;
 import com.example.model.Player;
 import com.example.strategy.GameStrategy;
 import com.example.strategy.MultipleClapStrategy;

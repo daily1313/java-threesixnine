@@ -1,6 +1,6 @@
 package fixture;
 
-import com.example.model.Name;
+import com.example.model.vo.Name;
 import com.example.model.Player;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package model;
 
-import com.example.model.Name;
+import com.example.model.vo.Name;
 import com.example.model.Player;
 import fixture.NameFixture;
 import fixture.PlayerFixture;
