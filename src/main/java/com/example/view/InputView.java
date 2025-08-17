@@ -11,9 +11,8 @@ public class InputView {
 
     public int inputGameOption() {
         System.out.println(INPUT_GAME_OPTION_MESSAGE);
-        int option = scanner.nextInt();
-        scanner.nextLine();
-        return option;
+        String line = scanner.nextLine().trim();
+        return Integer.parseInt(line);
     }
 
     public String inputPlayerNamesSeperatedByComma() {
