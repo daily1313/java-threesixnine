@@ -1,7 +1,7 @@
 package com.example.util;
 
 import com.example.exception.DuplicatedPlayerNameException;
-import com.example.exception.NameNotBlankException;
+import com.example.exception.EmptyNameException;
 import com.example.exception.NotEnoughNameSizeException;
 
 import java.util.HashSet;
@@ -17,7 +17,7 @@ public class NameValidator {
 
     public static void validateInput(String input) {
         if(input == null || input.isEmpty()) {
-            throw new NameNotBlankException();
+            throw new EmptyNameException();
         }
     }
 

@@ -1,6 +1,6 @@
 package com.example.model.vo;
 
-import com.example.exception.NameNotBlankException;
+import com.example.exception.EmptyNameException;
 
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public class Name {
 
     private void validate(String name) {
         if(name == null || name.isBlank()) {
-            throw new NameNotBlankException();
+            throw new EmptyNameException();
         }
     }
 

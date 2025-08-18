@@ -1,7 +1,7 @@
 package util;
 
 import com.example.exception.DuplicatedPlayerNameException;
-import com.example.exception.NameNotBlankException;
+import com.example.exception.EmptyNameException;
 import com.example.exception.NotEnoughNameSizeException;
 import com.example.util.NameValidator;
 import org.junit.jupiter.api.DisplayNameGeneration;
@@ -20,10 +20,10 @@ public class NameValidatorTest {
     void 입력이_공백이거나_null_이면_예외가_발생한다() {
         // when & then
         assertThatThrownBy(() -> NameValidator.validateInput(null))
-                .isInstanceOf(NameNotBlankException.class);
+                .isInstanceOf(EmptyNameException.class);
 
         assertThatThrownBy(() -> NameValidator.validateInput(""))
-                .isInstanceOf(NameNotBlankException.class);
+                .isInstanceOf(EmptyNameException.class);
     }
 
     @Test

@@ -1,6 +1,6 @@
 package model;
 
-import com.example.exception.NameNotBlankException;
+import com.example.exception.EmptyNameException;
 import com.example.model.vo.Name;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -19,6 +19,6 @@ public class NameTest {
     public void 이름은_공백일_수_없다(String input) {
         // when & then
         assertThatThrownBy(() -> Name.from(input))
-                .isInstanceOf(NameNotBlankException.class);
+                .isInstanceOf(EmptyNameException.class);
     }
 }
