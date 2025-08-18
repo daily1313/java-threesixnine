@@ -34,7 +34,7 @@ public class StrategyTest {
     }
 
     @Test
-    void single_전략에서는_369_숫자에서_clap_한번만_반환한다() {
+    void single_전략에서는_369가_포함되면_clap_문자열을_한번만_반환한다() {
         // given
         GameStrategy gameStrategy = StrategyFixture.from(1);
 
@@ -52,7 +52,7 @@ public class StrategyTest {
             "3333, clapclapclapclap"
     })
     @ParameterizedTest(name = "{0} 입력 시, {1} 반환")
-    void multiple_전략에서는_369_숫자에서_clap_개수별로_반환한다(int input, String expected) {
+    void multiple_전략에서는_clap_문자열을_369의_개수별로_반환한다(int input, String expected) {
         // given
         GameStrategy gameStrategy = StrategyFixture.from(2);
 
